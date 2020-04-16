@@ -496,7 +496,7 @@ public abstract class AbstractStatusMessageMenu
             return;
         }
 
-        // a ne message was created
+        // a new message was created
         if(menuItem.equals(newMessageItem))
         {
             clearSelectedItems();
