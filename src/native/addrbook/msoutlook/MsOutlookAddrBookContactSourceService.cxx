@@ -106,7 +106,7 @@ HRESULT MsOutlookAddrBookContactSourceService_MAPIInitialize
             i++;
             if (ERROR_SUCCESS != regEnumKeyEx)
 			{
-            	MsOutlookUtils_logInfo("Error quering the next Software\\Microsoft\\Office item.");
+            	MsOutlookUtils_logInfo("Error querying the next Software\\Microsoft\\Office item.");
                 continue;
 			}
 
@@ -178,7 +178,7 @@ HRESULT MsOutlookAddrBookContactSourceService_MAPIInitialize
                                 str++;
                             memcpy(str, _T("\\Outlook.exe"), 12 * sizeof(TCHAR));
                             *(str + 12) = 0;
-                            MsOutlookUtils_logInfo("Trying to retrieve atributes for:");
+                            MsOutlookUtils_logInfo("Trying to retrieve attributes for:");
                             MsOutlookUtils_logInfo(pathValue);
                             fileAttributes = GetFileAttributes(pathValue);
                             if (INVALID_FILE_ATTRIBUTES != fileAttributes)
@@ -212,7 +212,7 @@ HRESULT MsOutlookAddrBookContactSourceService_MAPIInitialize
             }
 			else
 			{
-				MsOutlookUtils_logInfo("Error openning the key.");
+				MsOutlookUtils_logInfo("Error opening the key.");
 			}
         }
         RegCloseKey(regKey);
